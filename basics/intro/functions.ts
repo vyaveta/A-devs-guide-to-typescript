@@ -27,8 +27,44 @@ const arrowFunction2 = (parameter: string): string => {
     return parameter
 }
 
-arrowFunction1("hello")
+// now lets explore the map function
 
-condition()
+const tech = ["Mongodb", "phyton", "javascript", "typescript"]
+
+tech.map((item)  => {
+    return 2
+    return item
+    return { name: "sanity"}
+})
+
+// by default the map function can return any type but we do can stop that and make it return only a certail type
+
+tech.map((item) : string => {
+    // return 2
+    return item
+    // return { name: "sanity"}
+})
+
+/** we may write function which does not return any, by default its return value will be void, but thats not a 
+ * good practice, so we can use never for those cases */ 
+
+
+function createError(message: string): never {
+    throw new Error(message)
+    // return temp /** you will face error if you uncomment this line cuz this function is not allowed to return since its return type is never */
+}
+
+function isString(value: any): value is string {
+    return typeof(value) === "string"
+  }
+
+  // given above is the example of typeguard, what it does is that, if the function returns false, it treats the value as string
+
+function isBoolean(value: any): value is boolean {
+    return typeof(value) === "boolean"
+}
+// now this function treats the value as boolean if the function returns true
+
+
 
 export {}

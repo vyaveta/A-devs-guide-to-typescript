@@ -31,4 +31,12 @@ let obj : {
     length: "small"
 } // this is also a way of declaring object in ts
 
+// incase of creating objects from functions
+
+function createAccount(name: string, age: number, occupation: string): {uid: string, designation: string, isPremium: boolean} {
+ return {uid: name + age, designation: occupation, isPremium: false}
+}
+
+let newUser = createAccount("Adwaith", 19, "software dev")
+
 export {}
