@@ -17,7 +17,7 @@ function condition(statement: string | boolean = false) : boolean | string {
 }
  
 
-// Two diff ways to write an arrow function in Typescript
+// there are diff ways to write an arrow function in Typescript
 
 const arrowFunction1: (parameter: string) => string = (parameter) => {
     return parameter
